@@ -17,6 +17,7 @@ enjoys hiking. Priya Singh,
      environmental conservation."""
 
 response1 = ollama.generate(model="qwen3:latest", prompt=paragraph, format="json")
+# we may not get consistant output
 print(response1.response)
 
 # we can give our own format

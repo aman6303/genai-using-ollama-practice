@@ -1,0 +1,18 @@
+# these are the commands fro creating a new model using modelfile and then push it to ollama
+
+1. write configuration for modelfile
+
+# command to create the new model (run these commands in same directory)
+2. ollama create <your-new-model-name> -f Modelfile 
+
+# test it by running
+3. ollama run <your-new-model-name>
+
+# login to ollama account
+4. ollama login
+
+# copy (rename) your local model to match your namespace format: username/model-name.
+5. ollama cp <your-new-model-name> username/<your-new-model-name>
+
+# push the model
+6. ollama push myuser/<your-new-model-name>
