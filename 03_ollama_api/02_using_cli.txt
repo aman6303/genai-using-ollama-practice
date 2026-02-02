@@ -1,0 +1,23 @@
+# we can use these commands directly (in linux)
+
+curl http://localhost:11434/api/generate -d '{
+  "model": "qwen3:0.6b",
+  "prompt": "Why is the sky blue?"
+}'
+
+# we can use these also (in windows powershell)
+
+Invoke-RestMethod -Uri "http://localhost:11434/api/generate" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{
+    "model": "qwen3:0.6b",
+    "prompt": "Why is the sky blue?"
+  }'
+
+  # if windows support wsl use 
+
+  curl.exe http://localhost:11434/api/generate -d "{
+  \"model\": \"qwen3:0.6b\",
+  \"prompt\": \"Why is the sky blue?\"
+}"
